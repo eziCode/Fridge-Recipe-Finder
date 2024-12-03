@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchText: String = ""
+    @FocusState private var isSearchFieldFocused: Bool
+    @State private var showModal: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ZStack {
+                Color.white.ignoresSafeArea()
+                VStack {
+                    HStack {
+                        Button(action: {
+                            openCamera()
+                        }) {
+                            Image(systemName: "camera")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(.blue)
+                        }
+                        
+                    }
+                    Spacer()
+                }
+                .padding()
+            }
         }
-        .padding()
-    }
 }
 
 #Preview {
     ContentView()
+}
+
+func openCamera() {
+    print("hello")
 }
