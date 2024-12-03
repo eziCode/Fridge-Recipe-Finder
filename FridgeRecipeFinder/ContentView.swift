@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText: String = ""
-    @FocusState private var isSearchFieldFocused: Bool
-    @State private var showModal: Bool = false
     
     var body: some View {
             ZStack {
