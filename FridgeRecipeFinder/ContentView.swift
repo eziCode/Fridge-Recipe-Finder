@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     /// ContentView Properties
     @State private var showScanner: Bool = false
+    @State private var scannedCode: String = ""
     
     var body: some View {
             ZStack {
@@ -24,7 +25,7 @@ struct ContentView: View {
                         }
                         .padding()
                         .sheet(isPresented: $showScanner) {
-                            ScannerView(showScanner: $showScanner)
+                            ScannerView(showScanner: $showScanner, scannedCode: $scannedCode)
                         }
                         Spacer()
                     }
@@ -32,6 +33,10 @@ struct ContentView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .onChange(of: scannedCode) {
+                /// Implement logic to open new view to show more detailed information about product
+                print("scanned code: ", scannedCode)
+            }
         }
 }
 

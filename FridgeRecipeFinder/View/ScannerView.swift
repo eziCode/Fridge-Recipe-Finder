@@ -24,7 +24,7 @@ struct ScannerView: View {
     /// Camera Barcode Output Delegate
     @StateObject private var barcodeDelegate = BarcodeScannerDelegate()
     /// Scanned Code
-    @State private var scannedCode: String = ""
+    @Binding var scannedCode: String
     var body: some View {
         VStack(spacing: 8) {
             Button {
@@ -116,7 +116,7 @@ struct ScannerView: View {
             }
             
         }
-        .onChange(of: barcodeDelegate.scannedCode) { newValue in
+        .onChange(of: barcodeDelegate.scannedCode) { _, newValue in
             if let code = newValue {
                 scannedCode = code
                 /// When the first scan is available, immediately stop the camera
