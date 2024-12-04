@@ -9,6 +9,8 @@ import SwiftUI
 import AVKit
 
 struct ScannerView: View {
+    /// View Controller Properties
+    @Binding var showScanner: Bool
     /// Bar Code Scanner Properties
     @State private var isScanning: Bool = false
     @State private var session: AVCaptureSession = .init()
@@ -27,6 +29,8 @@ struct ScannerView: View {
         VStack(spacing: 8) {
             Button {
                 /// Close ScannerView
+                session.stopRunning()
+                showScanner = false
             } label: {
                 Image(systemName: "xmark")
                     .font(.title3)
@@ -119,6 +123,7 @@ struct ScannerView: View {
                 session.stopRunning()
                 deactivateScannerAnimation()
                 barcodeDelegate.scannedCode = nil
+                showScanner = false
             }
         }
         .onDisappear {

@@ -27,6 +27,11 @@ struct CameraView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        
+        guard uiView.frame.size != frameSize else { return }
+        uiView.frame.size = frameSize
+
+        if let cameraLayer = uiView.layer.sublayers?.first as? AVCaptureVideoPreviewLayer {
+            cameraLayer.frame = CGRect(origin: .zero, size: frameSize)
+        }
     }
 }
