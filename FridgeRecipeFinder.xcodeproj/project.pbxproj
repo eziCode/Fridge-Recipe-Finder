@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E131D29A2CFFE7E30080FB0D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D2992CFFE7E30080FB0D /* CameraView.swift */; };
+		E131D29D2CFFEBC30080FB0D /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D29C2CFFEBC30080FB0D /* Permission.swift */; };
+		E131D2A02CFFF69F0080FB0D /* BarcodeScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D29F2CFFF69F0080FB0D /* BarcodeScannerDelegate.swift */; };
+		E19A4A7B2CFFDF7D009BF3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19A4A732CFFDF7D009BF3FE /* Assets.xcassets */; };
+		E19A4A7D2CFFDF7D009BF3FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A4A742CFFDF7D009BF3FE /* ContentView.swift */; };
+		E19A4A7E2CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A4A752CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift */; };
+		E19A4A812CFFDFA1009BF3FE /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A4A802CFFDFA1009BF3FE /* ScannerView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E19C19D22CFE1DE500F59677 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,17 +34,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E131D2992CFFE7E30080FB0D /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		E131D29C2CFFEBC30080FB0D /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		E131D29E2CFFEE7D0080FB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E131D29F2CFFF69F0080FB0D /* BarcodeScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerDelegate.swift; sourceTree = "<group>"; };
+		E19A4A732CFFDF7D009BF3FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E19A4A742CFFDF7D009BF3FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E19A4A752CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeRecipeFinderApp.swift; sourceTree = "<group>"; };
+		E19A4A802CFFDFA1009BF3FE /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		E19C19C12CFE1DE300F59677 /* FridgeRecipeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeRecipeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19C19D12CFE1DE500F59677 /* FridgeRecipeFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeRecipeFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19C19DB2CFE1DE500F59677 /* FridgeRecipeFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeRecipeFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E19C19C32CFE1DE300F59677 /* FridgeRecipeFinder */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FridgeRecipeFinder;
-			sourceTree = "<group>";
-		};
 		E19C19D42CFE1DE500F59677 /* FridgeRecipeFinderTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FridgeRecipeFinderTests;
@@ -72,10 +85,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E131D29B2CFFEBAA0080FB0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E131D29C2CFFEBC30080FB0D /* Permission.swift */,
+				E131D29F2CFFF69F0080FB0D /* BarcodeScannerDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E19A4A762CFFDF7D009BF3FE /* FridgeRecipeFinder */ = {
+			isa = PBXGroup;
+			children = (
+				E131D29E2CFFEE7D0080FB0D /* Info.plist */,
+				E131D29B2CFFEBAA0080FB0D /* Model */,
+				E19A4A7F2CFFDF85009BF3FE /* View */,
+				E19A4A732CFFDF7D009BF3FE /* Assets.xcassets */,
+				E19A4A742CFFDF7D009BF3FE /* ContentView.swift */,
+				E19A4A752CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift */,
+			);
+			path = FridgeRecipeFinder;
+			sourceTree = "<group>";
+		};
+		E19A4A7F2CFFDF85009BF3FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E19A4A802CFFDFA1009BF3FE /* ScannerView.swift */,
+				E131D2992CFFE7E30080FB0D /* CameraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E19C19B82CFE1DE300F59677 = {
 			isa = PBXGroup;
 			children = (
-				E19C19C32CFE1DE300F59677 /* FridgeRecipeFinder */,
+				E19A4A762CFFDF7D009BF3FE /* FridgeRecipeFinder */,
 				E19C19D42CFE1DE500F59677 /* FridgeRecipeFinderTests */,
 				E19C19DE2CFE1DE500F59677 /* FridgeRecipeFinderUITests */,
 				E19C19C22CFE1DE300F59677 /* Products */,
@@ -106,9 +150,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				E19C19C32CFE1DE300F59677 /* FridgeRecipeFinder */,
 			);
 			name = FridgeRecipeFinder;
 			packageProductDependencies = (
@@ -212,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19A4A7B2CFFDF7D009BF3FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19A4A812CFFDFA1009BF3FE /* ScannerView.swift in Sources */,
+				E19A4A7D2CFFDF7D009BF3FE /* ContentView.swift in Sources */,
+				E19A4A7E2CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift in Sources */,
+				E131D29A2CFFE7E30080FB0D /* CameraView.swift in Sources */,
+				E131D2A02CFFF69F0080FB0D /* BarcodeScannerDelegate.swift in Sources */,
+				E131D29D2CFFEBC30080FB0D /* Permission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +447,7 @@
 				DEVELOPMENT_TEAM = G8BA878ZR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FridgeRecipeFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +477,7 @@
 				DEVELOPMENT_TEAM = G8BA878ZR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FridgeRecipeFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
