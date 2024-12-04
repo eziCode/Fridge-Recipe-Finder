@@ -10,8 +10,8 @@ import AVKit
 
 struct CameraView: UIViewRepresentable {
     var frameSize: CGSize
-    
     @Binding var session: AVCaptureSession
+    
     func makeUIView(context: Context) -> UIView {
         /// Defining Camera Frame
         let view = UIViewType(frame: CGRect(origin: .zero, size: frameSize))

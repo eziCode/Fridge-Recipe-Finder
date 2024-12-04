@@ -26,7 +26,7 @@ struct ScannerView: View {
     var body: some View {
         VStack(spacing: 8) {
             Button {
-                
+                /// Close ScannerView
             } label: {
                 Image(systemName: "xmark")
                     .font(.title3)

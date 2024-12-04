@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    /// ContentView Properties
+    
     var body: some View {
         ScannerView()
     }
