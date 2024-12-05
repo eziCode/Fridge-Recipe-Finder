@@ -35,8 +35,12 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onChange(of: scannedCode) {
-            /// Implement logic to open new view to show more detailed information about product
+            /// Retrieve Information about Product from Open Food Facts API
             fetchProductData()
+        }
+        .onChange(of: product) { _, newValue in
+            /// Open ProductView and present infromation retrieved
+            print(product?.nutriments.calcium)
         }
     }
     

@@ -11,7 +11,16 @@ struct APIResponse: Codable {
     let product: Product
 }
 
-struct Product: Codable {
+struct Product: Codable, Equatable {
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.product_name == rhs.product_name &&
+                   lhs.product_name_en == rhs.product_name_en &&
+                   lhs.brands == rhs.brands &&
+                   lhs.nutriments == rhs.nutriments &&
+                   lhs.nutriscoreScore == rhs.nutriscoreScore &&
+                   lhs.keywords == rhs.keywords
+    }
+    
     let product_name: String
     let product_name_en: String?
     let brands: String
@@ -29,7 +38,7 @@ struct Product: Codable {
     }
 }
 
-struct Nutriments: Codable {
+struct Nutriments: Codable, Equatable {
     let calcium: Double?
     let carbohydrates: Double?
     let energy: Double?
