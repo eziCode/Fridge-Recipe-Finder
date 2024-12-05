@@ -41,12 +41,11 @@ struct ContentView: View {
             /// Retrieve Information about Product from Open Food Facts API
             fetchProductData()
         }
+        .onChange(of: product) { _, newValue in
+            showProductView = true
+        }
         .sheet(isPresented: $showProductView) {
-            if let product = product {
-                ProductView(product: product)
-            } else {
-                Text("Error opening product view")
-            }
+            ProductView(product: product!)
         }
     }
     
@@ -69,10 +68,8 @@ struct ContentView: View {
             
             do {
                 let decodedData = try JSONDecoder().decode(APIResponse.self, from: data)
-                DispatchQueue.main.async {
-                    product = decodedData.product
-                    showProductView = true
-                }
+                product = decodedData.product
+                showProductView = true
             } catch {
                 print("Error decoding JSON: \(error)")
             }
