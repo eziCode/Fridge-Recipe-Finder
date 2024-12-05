@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    /// ContentView Properties
+    /// ScannerView
     @State private var showScanner: Bool = false
     @State private var scannedCode: String = ""
+    
+    /// ProductView
     @State private var product: Product? = nil
+    @State private var showProductView: Bool = false
     
     var body: some View {
         ZStack {
@@ -38,9 +41,12 @@ struct ContentView: View {
             /// Retrieve Information about Product from Open Food Facts API
             fetchProductData()
         }
-        .onChange(of: product) { _, newValue in
-            /// Open ProductView and present infromation retrieved
-            print(product?.nutriments.calcium)
+        .sheet(isPresented: $showProductView) {
+            if let product = product {
+                ProductView(product: product)
+            } else {
+                Text("Error opening product view")
+            }
         }
     }
     
@@ -65,6 +71,7 @@ struct ContentView: View {
                 let decodedData = try JSONDecoder().decode(APIResponse.self, from: data)
                 DispatchQueue.main.async {
                     product = decodedData.product
+                    showProductView = true
                 }
             } catch {
                 print("Error decoding JSON: \(error)")

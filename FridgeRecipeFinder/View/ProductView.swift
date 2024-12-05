@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ProductView: View {
+    let product: Product
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Product Name: \(product.product_name)")
+            Text("Calcium: \(product.nutriments.calcium ?? 0) mg")
+        }
     }
-}
-
-#Preview {
-    ProductView()
 }
