@@ -10,6 +10,8 @@
 		E131D29A2CFFE7E30080FB0D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D2992CFFE7E30080FB0D /* CameraView.swift */; };
 		E131D29D2CFFEBC30080FB0D /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D29C2CFFEBC30080FB0D /* Permission.swift */; };
 		E131D2A02CFFF69F0080FB0D /* BarcodeScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D29F2CFFF69F0080FB0D /* BarcodeScannerDelegate.swift */; };
+		E131D2A22D00F5AD0080FB0D /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D2A12D00F5AD0080FB0D /* ProductView.swift */; };
+		E131D2A42D0134EF0080FB0D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E131D2A32D0134EE0080FB0D /* Product.swift */; };
 		E19A4A7B2CFFDF7D009BF3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19A4A732CFFDF7D009BF3FE /* Assets.xcassets */; };
 		E19A4A7D2CFFDF7D009BF3FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A4A742CFFDF7D009BF3FE /* ContentView.swift */; };
 		E19A4A7E2CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19A4A752CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift */; };
@@ -38,6 +40,8 @@
 		E131D29C2CFFEBC30080FB0D /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		E131D29E2CFFEE7D0080FB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E131D29F2CFFF69F0080FB0D /* BarcodeScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerDelegate.swift; sourceTree = "<group>"; };
+		E131D2A12D00F5AD0080FB0D /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		E131D2A32D0134EE0080FB0D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		E19A4A732CFFDF7D009BF3FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E19A4A742CFFDF7D009BF3FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E19A4A752CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeRecipeFinderApp.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			children = (
 				E131D29C2CFFEBC30080FB0D /* Permission.swift */,
 				E131D29F2CFFF69F0080FB0D /* BarcodeScannerDelegate.swift */,
+				E131D2A32D0134EE0080FB0D /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			children = (
 				E19A4A802CFFDFA1009BF3FE /* ScannerView.swift */,
 				E131D2992CFFE7E30080FB0D /* CameraView.swift */,
+				E131D2A12D00F5AD0080FB0D /* ProductView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,9 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19A4A812CFFDFA1009BF3FE /* ScannerView.swift in Sources */,
+				E131D2A42D0134EF0080FB0D /* Product.swift in Sources */,
 				E19A4A7D2CFFDF7D009BF3FE /* ContentView.swift in Sources */,
 				E19A4A7E2CFFDF7D009BF3FE /* FridgeRecipeFinderApp.swift in Sources */,
 				E131D29A2CFFE7E30080FB0D /* CameraView.swift in Sources */,
+				E131D2A22D00F5AD0080FB0D /* ProductView.swift in Sources */,
 				E131D2A02CFFF69F0080FB0D /* BarcodeScannerDelegate.swift in Sources */,
 				E131D29D2CFFEBC30080FB0D /* Permission.swift in Sources */,
 			);
