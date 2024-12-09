@@ -32,7 +32,7 @@ struct ProductView: View {
                     }
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray6)))
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray5)))
                 .shadow(radius: 2)
                 
                 // Nutritional Information Section
@@ -53,7 +53,7 @@ struct ProductView: View {
                     NutrientRow(name: "Sugars", value: product.nutriments.sugars, unit: "g")
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray6)))
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray5)))
                 .shadow(radius: 2)
                 
                 // Nutri-Score Section
@@ -69,13 +69,14 @@ struct ProductView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray6)))
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray5)))
                 .shadow(radius: 2)
             }
             .padding()
             
             Button(action: {
-                /// Add Product to Ingredient Database
+                /// Add Ingredient to database
+                print("Add Ingredient button tapped for \(product.product_name)")
             }) {
                 Text("Add Ingredient")
                     .fontWeight(.bold)
