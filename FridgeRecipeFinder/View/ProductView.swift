@@ -11,6 +11,8 @@ struct ProductView: View {
     @Binding var showProductView: Bool
     @Binding var product: Product?
     
+    @State private var amountOfIngredients: Int = 1
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -75,6 +77,36 @@ struct ProductView: View {
             }
             .padding()
             
+            VStack {
+                HStack {
+                    Button(action: {
+                        if amountOfIngredients > 1 {
+                            amountOfIngredients -= 1
+                        }
+                    }) {
+                        Image(systemName: "minus.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.red)
+                    }
+                    
+                    Text("\(amountOfIngredients)")
+                        .font(.title)
+                        .padding(.horizontal)
+                    
+                    Button(action: {
+                        amountOfIngredients += 1
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.green)
+                    }
+                }
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color(.systemGray5)))
+                .shadow(radius: 2)
+            }
+            .padding()
+            
             Button(action: {
                 /// Add Ingredient to database
                 showProductView = false
@@ -98,7 +130,6 @@ struct ProductView: View {
     }
     
     // TODO: Add button where user can increment the number of ingredients they have
-    // TODO: Finish this function
     func addProductToDatabase() {
         guard let uuid = UIDevice.current.identifierForVendor?.uuidString else { return }
         guard let url = URL(string: "http://192.168.40.68:3000/addProductToFridge") else {
@@ -126,7 +157,8 @@ struct ProductView: View {
                 "sugars": product?.nutriments.sugars
             ],
             "nutriscoreScore": product?.nutriscoreScore ?? -1.0,
-            "keywords": product?.keywords ?? ["n/a"]
+            "keywords": product?.keywords ?? ["n/a"],
+            "amountOfIngredients": amountOfIngredients
         ]
         
         do {
