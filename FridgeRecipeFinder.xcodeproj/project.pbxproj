@@ -115,8 +115,8 @@
 		E19A4A7F2CFFDF85009BF3FE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E19A4A802CFFDFA1009BF3FE /* ScannerView.swift */,
 				E131D2992CFFE7E30080FB0D /* CameraView.swift */,
+				E19A4A802CFFDFA1009BF3FE /* ScannerView.swift */,
 				E131D2A12D00F5AD0080FB0D /* ProductView.swift */,
 			);
 			path = View;

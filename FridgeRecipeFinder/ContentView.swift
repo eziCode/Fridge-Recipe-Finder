@@ -42,10 +42,12 @@ struct ContentView: View {
             fetchProductData()
         }
         .onChange(of: product) { _, newValue in
-            showProductView = true
+            if product != nil {
+                showProductView = true
+            }
         }
         .sheet(isPresented: $showProductView) {
-            ProductView(product: product!)
+            ProductView(showProductView: $showProductView, product: $product)
         }
         .onAppear {
             sendDeviceIdentifierToServer()

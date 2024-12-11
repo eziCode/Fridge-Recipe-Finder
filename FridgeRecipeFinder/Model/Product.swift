@@ -36,6 +36,15 @@ struct Product: Codable, Equatable {
         case nutriscoreScore = "nutriscore_score"
         case keywords = "_keywords"
     }
+    
+    static let empty = Product(
+            product_name: "",
+            product_name_en: nil,
+            brands: "",
+            nutriments: Nutriments.empty,
+            nutriscoreScore: nil,
+            keywords: []
+        )
 }
 
 struct Nutriments: Codable, Equatable {
@@ -60,5 +69,17 @@ struct Nutriments: Codable, Equatable {
         case saturatedFat = "saturated-fat"
         case sugars
     }
+    
+    static let empty = Nutriments(
+            calcium: nil,
+            carbohydrates: nil,
+            energy: nil,
+            fat: nil,
+            fiber: nil,
+            proteins: nil,
+            salt: nil,
+            saturatedFat: nil,
+            sugars: nil
+        )
 }
 
